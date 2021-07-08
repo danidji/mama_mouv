@@ -1,8 +1,5 @@
 import React from 'react';
 
-
-
-
 const Layout = ({ welcome, mainContent, contact, navbar }) => {
 
     return (
