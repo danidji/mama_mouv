@@ -1,4 +1,3 @@
-import '../styles/index.sass'
 import '../styles/app.sass'
 import Head from 'next/head'
 
