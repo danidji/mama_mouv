@@ -1,14 +1,22 @@
 import React from 'react';
 
-const Layout = ({ welcome, main, contact }) => {
+
+
+
+const Layout = ({ welcome, mainContent, contact, navbar }) => {
 
     return (
-        <div className="container">
-            {welcome}
-            {main}
-            {contact}
+        <>
+            <div className="navbar">
+                {navbar}
+            </div>
+            <div className="container">
+                {welcome}
+                {mainContent}
+                {contact}
 
-        </div >
+            </div >
+        </>
     )
 
 
