@@ -8,7 +8,7 @@ import Contact from "./components/Contact";
 
 export default function Home() {
   return (
-    <div className="container">
+    <div className="site">
 
       <Layout welcome={<Welcome />} main={<Main />} contact={<Contact />} />
 
