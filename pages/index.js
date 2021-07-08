@@ -2,15 +2,15 @@
 
 import Layout from "./components/Layout";
 import Welcome from "./components/Welcome";
-import Main from "./components/Main";
+import MainContent from "./components/MainContent";
 import Contact from "./components/Contact";
-
+import Navbar from './components/Navbar';
 
 export default function Home() {
   return (
     <div className="site">
 
-      <Layout welcome={<Welcome />} main={<Main />} contact={<Contact />} />
+      <Layout navbar={<Navbar />} welcome={<Welcome />} mainContent={<MainContent />} contact={<Contact />} />
 
     </div>
   )

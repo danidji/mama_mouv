@@ -17,7 +17,7 @@ const Welcome = (props) => {
                             height={500}
                             layout="responsive"
                         />
-                        <p>Individuel/collectif</p>
+                        <p>Individuel / Collectif</p>
                     </div>
 
                     <div className="logo_title">
