@@ -15,7 +15,7 @@ const MainContent = (props) => {
     const panelsRef = useRef(null);
     const panelsContainerRef = useRef(null);
 
-    // Animation scroll défilement verticale
+    // Animation scroll défilement horizontal
     useEffect(() => {
         const panels = gsap.utils.toArray(".panel");
 
