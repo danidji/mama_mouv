@@ -27,10 +27,6 @@ const MainContent = (props) => {
                 pin: true,
                 start: "top top",
                 scrub: true,
-                snap: {
-                    snapTo: 1 / (panels.length - 1),
-                    duration: { min: 0.1, max: 0.1 }
-                },
                 end: () => "+=" + (panelsContainerRef.current.offsetWidth - innerWidth)
             }
         });
