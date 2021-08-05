@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { gsap } from "gsap/dist/gsap.js";
 // import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import CoachingPanel from './CoachingPanel';
 
 
 
@@ -41,12 +42,12 @@ const MainContent = (props) => {
             <div className="panels_container" ref={panelsContainerRef}>
                 <div className="panel presentation">
                     <div className="infos">
-                        <div className="infos_center">
-                            <h1 className="title">Qui suis je ?</h1>
+                        <div className="infos_text">
+                            <h1 className="title first">Qui suis je ?</h1>
                             <p>Infirmière pendant 10 ans puis par la suite coach sportif diplômé d’état du BPJEPS AGFF (Activités Gymniques de la Forme et de la Force), je vous propose mes services de coaching à l’extérieur, à domicile ou en entreprise, en groupe ou en individuel. </p>
-                            <h1 className="title">Mon objectif</h1>
-                            <p>Réaliser les votres</p>
-                            <h1 className="title">Ma philosophie</h1>
+                            <h2 className="title">Mon objectif</h2>
+                            <p>Réaliser les votres, dans la joie et la sincérité !</p>
+                            <h2 className="title">Ma philosophie</h2>
                             <p>Prendre plaisir, gagner en estime de soi et vous amener vers l’autonomie dans votre hygiène de vie et votre santé.</p>
                         </div>
                     </div>
@@ -61,13 +62,13 @@ const MainContent = (props) => {
                         <img src="/images/coaching_jo4_sbg5.png" alt="Pres Mama mouv" />
                     </div>
                 </div>
-                <div className="panel " >
-                    <h1>Panel 2</h1>
+                <div className="panel coaching" >
+                    <CoachingPanel />
 
                 </div>
-                <div className="panel " >
+                {/* <div className="panel " >
                     <h1>Panel 3</h1>
-                </div>
+                </div> */}
             </div>
         </section>
     )
