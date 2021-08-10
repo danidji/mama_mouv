@@ -15,7 +15,12 @@ const CoachingPanel = (props) => {
     }
 
     const closePanel = () => {
-        setDisplay(null);
+        if (display === 'individual' || display === 'collective') {
+            setDisplay(null);
+
+        } else if (display === 'perso' || display === 'pregnant' || display === 'pilates') {
+            setDisplay('individual')
+        }
     }
 
     const displayWindow = (element) => {
