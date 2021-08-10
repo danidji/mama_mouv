@@ -70,9 +70,6 @@ const MainContent = (props) => {
                     <CoachingPanel />
 
                 </div>
-                {/* <div className="panel " >
-                    <h1>Panel 3</h1>
-                </div> */}
             </div>
         </section>
     )
