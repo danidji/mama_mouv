@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 
 import IndividualCoachingPanel from './IndividualCoachingPanel';
 import CollectiveCoachingPanel from './CollectiveCoachingPanel';
+import PersoPanel from './PersoPanel';
+import PregnantPanel from './PregnantPanel';
+import PilatesPanel from './PilatesPanel';
 
 const CoachingPanel = (props) => {
     const [display, setDisplay] = useState(null);
@@ -23,7 +26,12 @@ const CoachingPanel = (props) => {
                 return <IndividualCoachingPanel open={openPanel} close={closePanel} />
             case 'collective':
                 return <CollectiveCoachingPanel open={openPanel} close={closePanel} />
-
+            case 'perso':
+                return <PersoPanel open={openPanel} close={closePanel} />
+            case 'pregnant':
+                return <PregnantPanel open={openPanel} close={closePanel} />
+            case 'pilates':
+                return <PilatesPanel open={openPanel} close={closePanel} />
             default:
                 break
 
