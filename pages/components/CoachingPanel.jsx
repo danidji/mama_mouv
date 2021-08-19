@@ -9,11 +9,13 @@ import PilatesPanel from './PilatesPanel';
 const CoachingPanel = (props) => {
     const [display, setDisplay] = useState(null);
 
+    //Ouverture de la fenetre désiré
     const openPanel = (e) => {
         // console.log(e.target.dataset.window)
         setDisplay(e.target.dataset.window);
     }
 
+    //Fermeture de la fenetre et retour sur la précédente
     const closePanel = () => {
         if (display === 'individual' || display === 'collective') {
             setDisplay(null);
@@ -23,6 +25,7 @@ const CoachingPanel = (props) => {
         }
     }
 
+    //Affichage de la fenetre désiré
     const displayWindow = (element) => {
         switch (element) {
             case null:
