@@ -8,13 +8,13 @@ const Layout = ({ welcome, mainContent, contact, navbar }) => {
 
     gsap.registerPlugin(ScrollToPlugin);
 
+    //Navigation entre les différentes fenêtres
     useEffect(() => {
 
         const panelsSection = document.querySelector(".panels");
         const panelsContainer = document.querySelector(".panels_container");
 
         document.querySelectorAll(".anchor").forEach(anchor => {
-            console.log(`document.querySelectorAll -> anchor`, anchor)
             anchor.addEventListener("click", function (e) {
                 e.preventDefault();
 
@@ -52,7 +52,7 @@ const Layout = ({ welcome, mainContent, contact, navbar }) => {
             <div className="container">
                 {welcome}
                 {mainContent}
-                {contact}
+                {/* {contact} */}
 
             </div >
         </>
