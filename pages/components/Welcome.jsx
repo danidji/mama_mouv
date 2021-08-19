@@ -4,7 +4,7 @@ import Image from 'next/image';
 const Welcome = (props) => {
 
     return (
-        <section className="welcome full-screen">
+        <section className="welcome full-screen" id="welcome-page">
             <div className="header">
 
             </div>

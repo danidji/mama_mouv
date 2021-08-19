@@ -44,7 +44,7 @@ const MainContent = (props) => {
 
             </div> */}
             <div className="panels_container" ref={panelsContainerRef}>
-                <div className="panel presentation">
+                <div className="panel presentation" id="pres-view">
                     <div className="infos">
                         <div className="infos_text">
                             <h1 className="title first">Qui suis je ?</h1>
@@ -66,7 +66,7 @@ const MainContent = (props) => {
                         <img src="/images/coaching_jo4_sbg5.png" alt="Pres Mama mouv" />
                     </div>
                 </div>
-                <div className="panel coaching" >
+                <div className="panel coaching" id="coaching-view" >
                     <CoachingPanel />
 
                 </div>
