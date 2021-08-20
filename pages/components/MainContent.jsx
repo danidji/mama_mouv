@@ -1,8 +1,7 @@
 import React, { useRef, useEffect } from 'react';
-import Image from 'next/image';
+
 //import GSAP 
 import { gsap } from "gsap/dist/gsap.js";
-// import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import CoachingPanel from './CoachingPanel';
 
@@ -40,9 +39,6 @@ const MainContent = (props) => {
 
     return (
         <section className="panels" ref={panelsRef}>
-            {/* <div className="fake_header">
-
-            </div> */}
             <div className="panels_container" ref={panelsContainerRef}>
                 <div className="panel presentation" id="pres-view">
                     <div className="infos">
@@ -56,13 +52,6 @@ const MainContent = (props) => {
                         </div>
                     </div>
                     <div className="image_pres">
-                        {/* <Image
-                            src="/images/coaching_jo4_sbg2.png"
-                            alt="Pres Mama mouv"
-                            width="100"
-                            height="100"
-                        // layout="fill"
-                        /> */}
                         <img src="/images/coaching_jo4_sbg5.png" alt="Pres Mama mouv" />
                     </div>
                 </div>

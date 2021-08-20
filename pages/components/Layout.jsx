@@ -52,7 +52,7 @@ const Layout = ({ welcome, mainContent, contact, navbar }) => {
             <div className="container">
                 {welcome}
                 {mainContent}
-                {/* {contact} */}
+                {contact}
 
             </div >
         </>

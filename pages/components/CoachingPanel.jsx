@@ -11,7 +11,6 @@ const CoachingPanel = (props) => {
 
     //Ouverture de la fenetre désiré
     const openPanel = (e) => {
-        // console.log(e.target.dataset.window)
         setDisplay(e.target.dataset.window);
     }
 
