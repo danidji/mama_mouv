@@ -5,8 +5,8 @@
         width: 100%
         height: 100%
         object-fit: cover
-        z-index: 1
-        opacity: .5
+        z-index: 2
+        opacity: .25
     .close_icon_modal
         font-size: 2rem
         margin-right: .5rem
@@ -14,7 +14,58 @@
         position: absolute
         right: 1rem
         top: 1rem
-        z-index: 2
+        z-index: 99
         color: $bgc-color
-    .pregnant_close
+        &:hover
+            color: $first-color
+            transition: .3s
+    .black_close
         color: $font-color
+        &:hover
+            color: $first-color
+            transition: .3s
+    .modal_information
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        z-index: 9
+        border-radius: 1rem
+        display: flex
+        flex-direction: column
+        .modal_head
+            height: 5rem
+            padding-left: 1rem
+            h3
+                font-size: 1.8rem
+        .modal_content_information
+            flex: 1
+            display: flex
+            .bold
+                font-weight: bold
+            .left_content
+                flex: 1
+                padding: 1.3rem
+                text-align: justify
+                font-size: 1.4rem
+                font-style: italic
+                // color: $bgc-color
+            .right_content
+                flex: 1
+                display: flex
+                flex-direction: column
+                padding: 1.3rem 2rem
+                text-align: justify
+                font-size: 1.4rem
+                .content_price
+                    flex: 1
+                    h5
+                        font-size: 1.6rem
+                .content_button
+                    height: 9rem
+                    display: flex
+                    align-items: center
+                    justify-content: center
+
+                    @include styleButton($first-color,$bgc-color,$font-color)
