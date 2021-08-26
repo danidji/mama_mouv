@@ -5,7 +5,7 @@ export default (req, res) => {
 
     if (req.method === "POST") {
         const test = req.query;
-        // console.log(`test`, req)
+        // // console.log(`test`, req)
         handleMail(req, res);
 
         res.status(200).json(test);
@@ -13,27 +13,27 @@ export default (req, res) => {
 }
 
 function handleMail(req, res) {
-    // require('../../back-office/BDD/database');
 
-    //TODO Faire la vérif des champs 
+    require('../../back-office/BDD/database')();
+    //TODO 
+    // Faire la vérif des champs 
+    // Gestion des erreurs
+
 
     const newMessage = {
-        uuid: toolbox.S4() + toolbox.S4()
+        uuid: toolbox.S4() + toolbox.S4() // Création d'un code unique composé de 2 codes hexadécimaux
         , name: req.query.name
-        , date: new Date()
+        , date: new Date() // TODO Modifier le format
         , subject: req.query.subject
         , text: req.query.text
         , isRead: false
     }
 
+    // Sauvegarde du message en bdd
     Message.create(newMessage, (err, doc) => {
-        if (err) throw err
+        // if (err) throw err
 
-        console.log(doc)
+        console.log("Mon document ==>", doc)
     })
-
-
-
-    // console.log(newMessage);
 
 }

@@ -1,19 +1,21 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-// const schemaOptions = {
-//     timestamps: {
-//         createdAt: "created_at",
-//         updatedAt: "edited_at"
-//     }
-// };
+const schemaOptions = {
+    // timestamps: {
+    //     createdAt: "created_at",
+    //     updatedAt: "edited_at"
+    // },
+    versionKey: false
+};
 
 
 const MessageSchema = new Schema(
     {
         uuid: {
             type: String,
-            required: true
+            required: true,
+            unique: true
         },
         name: {
             type: String,
@@ -35,9 +37,8 @@ const MessageSchema = new Schema(
             type: Boolean,
             required: false
         }
-
     }
-    // , schemaOptions
+    , schemaOptions
 )
 
-module.exports = Message = mongoose.model("Message", MessageSchema, "messages");
+module.exports = Message = mongoose.model("Message", MessageSchema);

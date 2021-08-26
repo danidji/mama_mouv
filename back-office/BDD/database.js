@@ -10,7 +10,7 @@ module.exports = () => {
             , useNewUrlParser: true
             , useUnifiedTopology: true
         });
-    mongoose.set('useCreateIndex', true);
+    // mongoose.set('overwriteModels', true);
 
     const db = mongoose.connection;
 
