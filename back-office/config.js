@@ -7,11 +7,11 @@ module.exports = {
         , dbName: 'Mama-mouv'
     }
     , smtp: {
-        service: 'gmail'
-        , auth: {
-            user: 'solenhyathepickles@gmail.com'
-            , pass: '9~sMkC93n]'
-        }
+        service: 'Gmail',
+        auth: {
+            user: 'dummy.test130721@gmail.com',
+            pass: 'ZM7?2nv?4c'
+        },
     }
 
 }
