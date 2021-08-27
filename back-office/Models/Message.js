@@ -45,4 +45,4 @@ const MessageSchema = new Schema(
     , schemaOptions
 )
 
-module.exports = Message = mongoose.model("Message", MessageSchema);
+module.exports = Message = mongoose.models.Message || mongoose.model("Message", MessageSchema);
