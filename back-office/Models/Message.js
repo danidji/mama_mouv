@@ -17,6 +17,10 @@ const MessageSchema = new Schema(
             required: true,
             unique: true
         },
+        email: {
+            type: String,
+            required: true,
+        },
         name: {
             type: String,
             required: true
