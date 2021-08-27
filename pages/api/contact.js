@@ -2,7 +2,6 @@ const Message = require('../../back-office/Models/Message');
 const toolbox = require('../../back-office/services/toolbox');
 const validator = require('validator');
 const MailerService = require('../../back-office/services/Mailer');
-const config = require('../../back-office/config');
 
 export default (req, res) => {
 
@@ -36,8 +35,6 @@ function handleMail(req, res) {
                 //TODO 
                 // Gestion des erreurs => Vérifier les autres types d'erreur
 
-
-
                 const newMessage = {
                     uuid: toolbox.S4() + toolbox.S4() // Création d'un code unique composé de 2 codes hexadécimaux
                     , email: email
@@ -50,18 +47,9 @@ function handleMail(req, res) {
 
                 // Sauvegarde du message en bdd
                 Message.create(newMessage, (err, doc) => {
-                    // if (err) throw err
+                    if (err) throw err
 
                     const mailer = new MailerService();
-                    // TODO Faire l'envoi de mail
-                    const mailData = {
-                        to: "dangbe91@gmail.com",
-                        subject: doc.subject,
-                        html: `<div>${doc.text}</div>`,
-                        // text: doc.text,
-                        // html: `<div>${doc.text}</div>`,
-                        // from: config.smtp.auth.user
-                    }
 
                     // Envoi de l'email
                     mailer.send("dangbe91@gmail.com", doc.subject, doc.text).then(() => {
