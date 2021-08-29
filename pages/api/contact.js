@@ -13,23 +13,27 @@ export default (req, res) => {
 }
 
 function handleMail(req, res) {
-    const { email, name, subject, text } = req.query;
+    const { email, name, phone, text } = req.query;
     try {
 
         // Définition des erreurs
         const errors = {
             email: !email ? "Veuillez renseigner un email" : null,
             name: !name ? "Veuillez renseigner ce champ" : null,
-            subject: !subject ? "Veuillez renseigner ce champ" : null,
+            // subject: !subject ? "Veuillez renseigner ce champ" : null,
             text: !text ? "Veuillez renseigner  ce champ" : null
         }
 
         // Si tous mes champs sont remplie 
-        if (!errors.email && !errors.name && !errors.subject && !errors.text) {
+        if (!errors.email && !errors.name && !errors.text) {
             //Si l'email saisie est valide
             if (validator.isEmail(email)) {
 
-
+                //Si un numéro de tel est renseigné et que celui ci n'est pas valide
+                if (phone && !validator.isMobilePhone(phone, 'fr-FR')) {
+                    errors.phone = "Veuillez renseigner un numéro de téléphone valide"
+                    res.json({ errors: errors })
+                }
                 //connexion à la BDD
                 require('../../back-office/BDD/database')();
                 //TODO 
@@ -39,8 +43,8 @@ function handleMail(req, res) {
                     uuid: toolbox.S4() + toolbox.S4() // Création d'un code unique composé de 2 codes hexadécimaux
                     , email: email
                     , name: name
+                    , phone: phone
                     , date: new Date() // TODO Modifier le format
-                    , subject: subject
                     , text: text
                     , isRead: false
                 }

@@ -21,16 +21,15 @@ const MessageSchema = new Schema(
             type: String,
             required: true,
         },
+        phone: {
+            type: Number,
+        },
         name: {
             type: String,
             required: true
         },
         date: {
             type: Date,
-            required: true
-        },
-        subject: {
-            type: String,
             required: true
         },
         text: {
