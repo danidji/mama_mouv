@@ -7,13 +7,14 @@ export default (req, res) => {
 
     if (req.method === "POST") {
 
+        // console.log(req.body)
         handleMail(req, res);
 
     }
 }
 
 function handleMail(req, res) {
-    const { email, name, phone, text } = req.query;
+    const { email, name, phone, text } = req.body.params;
     try {
 
         // Définition des erreurs
