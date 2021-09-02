@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useEffect, useContext } from 'react';
+import { animContext } from '../context/animContext';
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
 
 const PregnantPanel = (props) => {
+
+    const context = useContext(animContext);
+
+    useEffect(() => {
+        context.scrollToAnim()
+    }, [])
+
     return (
         <div className="window_modal sub_window_modal">
             <div className="close_icon_modal black_close" onClick={props.close}>
@@ -36,7 +44,7 @@ const PregnantPanel = (props) => {
 
                         </div>
                         <div className="content_button">
-                            <button className="click_button anim"> <span> Contactez moi</span></button>
+                            <button className="click_button anim"><span><a href="#contact-view" className="anchor">Contactez moi</a></span></button>
                         </div>
                     </div>
 
