@@ -5,18 +5,29 @@ import axios from 'axios';
 
 const Contact = (props) => {
 
-    // TODO Faire la validation du form
-    //        v
-    // const validate = (value, type) => {
+    // Validdation des champs du formulaire
+    const validate = (value, type) => {
+        let error;
 
-    // }
+        if (type === "name" && value !== undefined && validator.isEmpty(value)) {
+            error = "Saisissez votre nom !"
+        }
+        if (type === "email" && value !== undefined && !validator.isEmail(value)) {
+            error = "Saisissez un email valide !"
+        }
+        if (type === "phone" && value !== "" && !validator.isMobilePhone(value, 'fr-FR')) {
+            error = "Votre numéro de téléphone n'est pas valide !"
+        }
+
+        return error
+    }
 
     return (
         <div className="full-screen" id="contact-view">
 
             <div className="form_content">
                 <h1>Contact</h1>
-                <p>Vous souhaitez plus de précisions sur mes cours, vous inscrire à une séance d'essai. </p>
+                <p>Vous souhaitez plus de précisions sur mes cours ou vous inscrire à une séance d'essai ! </p>
 
                 <p> Remplissez ce formulaire de contact :</p>
                 <Formik
@@ -35,23 +46,26 @@ const Contact = (props) => {
                         // axios.post('/api/contact', { params: values }).then((response) => {
                         // console.log('Mon retour ==> ', response);
                         // })
+                        actions.setSubmitting(false);
                     }}
 
                 >
-                    {(errors, touched) => (
+                    {({ errors, touched }) => (
                         <Form className="contact_form">
                             <Field
+                                validate={(value) => validate(value, "name")}
                                 name="name"
                                 type="text"
                                 className="name"
-                                placeholder="Nom & prénom"
+                                placeholder="Nom & prénom *"
                             />
                             {errors.name && touched.name ? <div>{errors.name}</div> : null}
                             <Field
                                 name="email"
                                 type="email"
                                 className="email"
-                                placeholder="Tapez votre email"
+                                placeholder="Email *"
+                                validate={(value) => validate(value, "email")}
                             />
                             {errors.email && touched.email ? <div>{errors.email}</div> : null}
 
@@ -59,18 +73,19 @@ const Contact = (props) => {
                                 name="phone"
                                 type="tel"
                                 className="phone"
-                                placeholder="Saisissez votre numéro pour être recontacté"
+                                placeholder="Téléphone"
+                                validate={(value) => validate(value, "phone")}
                             />
                             {errors.phone && touched.phone ? <div>{errors.phone}</div> : null}
                             <Field
                                 name="text"
-                                type="textarea"
+                                component="textarea"
                                 className="text"
-                                placeholder="Tapez votre message..."
+                                placeholder="Votre message..."
                             />
                             {errors.text && touched.text ? <div>{errors.text}</div> : null}
 
-                            <button type="submit" className="click_button anim">Valider</button>
+                            <button type="submit" className="click_button anim"> <span>Valider</span></button>
                         </Form>
                     )}
                 </Formik>
