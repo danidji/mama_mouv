@@ -17,9 +17,18 @@
         margin: 0 auto
         input
             padding: .5rem
-            margin: .5rem
-        @include styleButton($first-color,$bgc-color,$font-color)
-        button
-            width: 10rem
-        // .anim::before
-        //     content: 'Valider'
+            margin: .8rem
+            outline: none
+            border: none
+        .name, .email, .phone
+            width: 20rem
+        .text
+            width: 20rem
+            height: 7rem
+            outline: none
+            border: none
+            padding: 0.5rem
+            margin: .8rem
+            font-family: Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif
+
+        @include styleButton($first-color,$bgc-color,$font-color,1rem 2rem)

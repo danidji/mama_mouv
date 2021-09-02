@@ -45,13 +45,13 @@
             .bold
                 font-weight: bold
             .left_content
-                flex: 1
+                flex: 5
                 padding: 1.3rem
                 text-align: justify
                 font-size: 1.4rem
                 font-style: italic
             .right_content
-                flex: 1
+                flex: 3
                 display: flex
                 flex-direction: column
                 padding: 1.3rem 2rem
@@ -62,9 +62,10 @@
                     h5
                         font-size: 1.6rem
                 .content_button
-                    height: 9rem
+                    // height: 9rem
+                    flex: 1
                     display: flex
                     align-items: center
                     justify-content: center
 
-                    @include styleButton($first-color,$bgc-color,$font-color)
+                    @include styleButton($first-color,$bgc-color,$font-color,1.5rem 2rem )
