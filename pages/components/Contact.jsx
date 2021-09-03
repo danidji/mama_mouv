@@ -5,7 +5,7 @@ import axios from 'axios';
 
 const Contact = (props) => {
 
-    // Validdation des champs du formulaire
+    // Validation des champs du formulaire
     const validate = (value, type) => {
         let error;
 
