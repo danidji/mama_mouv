@@ -24,8 +24,8 @@ const PilatesPanel = (props) => {
                     <h3>Cours de pilates</h3>
                 </div>
                 <div className="modal_content_information">
-                    <div className="left_content">
-                        <p>L’approche globale, douce et tonique La Pilates vise à renforcer les muscles centraux, à allonger la colonne vertébrale, à développer le tonus musculaire et à augmenter la conscience de son corps.</p>
+                    <div className="left_content fs_large">
+                        <p>L’approche globale, douce et tonique, le Pilates vise à renforcer les muscles centraux, à allonger la colonne vertébrale, à développer le tonus musculaire et à augmenter la conscience de son corps.</p>
 
                         <p>Les exercices Pilates sont devenus l’un des moyens les plus populaires de renforcer son corps et de se mettre en forme. De plus en plus de personnes ont adopté la méthode Pilates comme une façon stimulante et amusante de se mettre en forme et de découvrir des aspects de leurs corps qu’elle ignorait jusque-là.
                         </p>
@@ -34,17 +34,17 @@ const PilatesPanel = (props) => {
                     <div className="right_content">
                         <div className="content_price">
                             <h5>Tarifs</h5>
-
+                            <p>1er séance offerte !</p>
                             <ul>
-                                <li><span className="bold">1 séances : 50€</span></li>
-                                <li><span className="bold">10 séances : 400€</span></li>
-                                <li><span className="bold">20 séances : 700€</span></li>
+                                <li><span className="bold">1 séances : 55€</span></li>
+                                <li><span className="bold">10 séances : 500€</span> <span className="small"> soit 50€ d'économie </span>  </li>
+                                <li><span className="bold">20 séances : 900€</span> <span className="small"> soit 200€ d'économie </span> </li>
                             </ul>
 
 
                         </div>
                         <div className="content_button">
-                            <button className="click_button anim"><span><a href="#contact-view" className="anchor">Contactez moi</a></span></button>
+                            <button className="click_button anim"><a href="#contact-view" className="anchor"><span>Contactez moi</span></a></button>
                         </div>
                     </div>
 

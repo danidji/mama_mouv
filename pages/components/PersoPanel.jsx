@@ -25,12 +25,14 @@ const PersoPanel = (props) => {
                     <h3>Suivi personnalisé</h3>
                 </div>
                 <div className="modal_content_information">
-                    <div className="left_content">
+                    <div className="left_content fs_large">
                         <p>Mon objectif est avant tout de réaliser le votre, que ce soit pour <span className="bold"> la perte de poid</span>,<span className="bold"> la remise en forme</span>, <span className="bold">la prise de masse</span>, nous analyserons ensemble vos objectifs pour <span className="bold">construire un programme entièrement adapté à vos besoins.</span></p>
 
                         <p>Votre programme sera entièrement <span className="bold">évolutif et adapté à vos progrès et votre évolution.</span></p>
 
                         <p>Coaching adapté à tous, <span className="bold">Débutant</span>, <span className="bold">Professionnel</span>, <span className="bold">Sénior</span> ou <span className="bold">PMR (personne à mobilité réduite)</span>.</p>
+
+                        <p>Un premier bilan gratuit, qui prendra en compte vos antécédents sportif, votre forme globale ainsi que vos objectifs, nous permettra de construire ensemble votre programme d'entrainement</p>
 
                     </div>
                     <div className="right_content">
@@ -38,14 +40,14 @@ const PersoPanel = (props) => {
                             <h5>Tarifs</h5>
                             <p>1er séance, bilan de forme et établissement du programme offert !</p>
                             <ul>
-                                <li><span className="bold">1 séances : 50€</span></li>
-                                <li><span className="bold">10 séances : 400€</span></li>
-                                <li><span className="bold">20 séances : 700€</span></li>
+                                <li><span className="bold">1 séances : 55€</span></li>
+                                <li><span className="bold">10 séances : 500€</span> <span className="small"> soit 50€ d'économie </span>  </li>
+                                <li><span className="bold">20 séances : 900€</span> <span className="small"> soit 200€ d'économie </span> </li>
                             </ul>
 
                         </div>
                         <div className="content_button">
-                            <button className="click_button anim"><span><a href="#contact-view" className="anchor">Contactez moi</a></span></button>
+                            <button className="click_button anim"><a href="#contact-view" className="anchor"><span>Contactez moi</span></a></button>
                         </div>
                     </div>
 

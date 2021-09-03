@@ -24,27 +24,32 @@ const PregnantPanel = (props) => {
                     <h3>Coaching femmes enceintes</h3>
                 </div>
                 <div className="modal_content_information">
-                    <div className="left_content">
-                        <h4>Fitness ou pilate pré/post natal :</h4>
-                        <p>Outils au service de la détente, de la préparation physique et de la prévention. Autant de sujets majeurs pendant la grossesse! Le pilate prénatal s’adresse autant aux femmes qui ont une grossesse sans problèmes qu’à celles qui nécessitent une prise en charge plus adaptée.</p>
-                        <p>Elle procure détente, sérénité et bien-être. Cela demande un travail profond du périnée et un renforcement musculaire adapté. Il favorise ainsi un travail sécuritaire du périnée au quotidien et lors de l’accouchement. Résultat : on limite les lésions sur celui-ci en préservant sa tonicité et on limite le diastasi recti. Enfin, le pilates prénatal permet un maintien de sa condition physique tout au long de la grossesse. Il renforce les articulations, le bas du corps et du dos en vue de l’allaitement et du portage du bébé notamment. L’approche globale, douce et tonique à la fois.</p>
+                    <div className="left_content fs_small">
+                        <p> L’activité physique pendant la grossesse permet de mieux vivre les modifications corporelles, elle diminue la fatigue et l’anxiété, limite le surplus de poids ainsi que le diabète gestationnel puis prévient les douleurs liées au changement de posture.</p>
+                        <p>Je vous offre plusieurs activités pour vous permettre de garder la forme durant votre grossesse et après l'accouchement :</p>
+                        <ul>
+                            <li><span className="bold">Fitness pré/post natal</span> : un mélange d’exercices cardiovasculaire et de renforcement musculaire ciblés sur les muscles sollicités pendant et après la grossesse. Avec un programme  adapté au fur et à mesure des trimestres,vous garderez la forme tout au long de votre grossesse et bien après..</li>
+                            <li><span className="bold">Pilates pré/post natal </span>: Le Pilate est une activité physique adaptée à la femme enceinte par la pratique d’une méthode de gym douce centrée sur les muscles profonds et du périnée. Cela limite donc les lésions sur celui-ci en préservant sa tonicité, parfait pour les futures mamans qui veulent s’exercer en douceur</li>
+                            <li><span className="bold">Zumba pré natal </span>: Au même titre que le fitness, c'est un exercice cardiovasculaire qui permet de garder la forme et la mobilité tout en s’éclatant en dansant. </li>
+                        </ul>
+
 
 
                     </div>
                     <div className="right_content">
                         <div className="content_price">
                             <h5>Tarifs</h5>
-
+                            <p>1er séance, bilan de forme et établissement du programme offert !</p>
                             <ul>
-                                <li><span className="bold">1 séances : 50€</span></li>
-                                <li><span className="bold">10 séances : 400€</span></li>
-                                <li><span className="bold">20 séances : 700€</span></li>
+                                <li><span className="bold">1 séances : 55€</span></li>
+                                <li><span className="bold">10 séances : 500€</span> <span className="small"> soit 50€ d'économie </span>  </li>
+                                <li><span className="bold">20 séances : 900€</span> <span className="small"> soit 200€ d'économie </span> </li>
                             </ul>
 
 
                         </div>
                         <div className="content_button">
-                            <button className="click_button anim"><span><a href="#contact-view" className="anchor">Contactez moi</a></span></button>
+                            <button className="click_button anim"><a href="#contact-view" className="anchor"><span>Contactez moi</span></a></button>
                         </div>
                     </div>
 
