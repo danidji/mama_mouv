@@ -59,7 +59,7 @@ const CoachingPanel = (props) => {
                     onClick={openPanel}
                 >
                     <div className="window_title" data-window="individual">Individuel</div>
-                    <img src="images/coach-indiv.jpg" alt="" data-window="individual" />
+                    <img src="images/sports-perso.jpg" alt="" data-window="individual" />
                 </div>
                 <div
                     className="window collective"
@@ -67,7 +67,7 @@ const CoachingPanel = (props) => {
                     onClick={openPanel}
                 >
                     <div className="window_title" data-window="collective">Collectif</div>
-                    <img src="images/coach_collectif.jpg" alt="" data-window="collective" />
+                    <img src="images/fitness-group2.jpg" alt="" data-window="collective" />
                 </div>
                 {displayWindow(display)}
             </div>
