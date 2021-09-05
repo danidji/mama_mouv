@@ -27,7 +27,8 @@ const PilatesPanel = (props) => {
                     <div className="left_content fs_large">
                         <p>L’approche globale, douce et tonique, le Pilates vise à renforcer les muscles centraux, à allonger la colonne vertébrale, à développer le tonus musculaire et à augmenter la conscience de son corps.</p>
 
-                        <p>Les exercices Pilates sont devenus l’un des moyens les plus populaires de renforcer son corps et de se mettre en forme. De plus en plus de personnes ont adopté la méthode Pilates comme une façon stimulante et amusante de se mettre en forme et de découvrir des aspects de leurs corps qu’elle ignorait jusque-là.
+                        <p>Les exercices Pilates sont devenus l’un des moyens les plus populaires de renforcer son corps et de se mettre en forme. </p>
+                        <p> De plus en plus de personnes ont adopté la méthode Pilates comme une façon stimulante et amusante de se mettre en forme et de découvrir des aspects de leurs corps qu’elle ignorait jusque-là.
                         </p>
 
                     </div>
@@ -41,10 +42,14 @@ const PilatesPanel = (props) => {
                                 <li><span className="bold">20 séances : 900€</span> <span className="small"> soit 200€ d'économie </span> </li>
                             </ul>
 
+                            <p className="mb-small">Possibilité de payer en chèques emploi service prépayés</p>
+                            <p className="mb-small">ou</p>
+                            <p className="mb-small">Bénéficier d'une réduction d'impot de -50%</p>
+
 
                         </div>
                         <div className="content_button">
-                            <button className="click_button anim"><a href="#contact-view" className="anchor"><span>Contactez moi</span></a></button>
+                            <button className="click_button anim"><a href="#contact-view" className="anchor"><span href="#contact-view" className="anchor">Contactez moi</span></a></button>
                         </div>
                     </div>
 
