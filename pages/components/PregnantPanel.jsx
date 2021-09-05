@@ -46,10 +46,13 @@ const PregnantPanel = (props) => {
                                 <li><span className="bold">20 séances : 900€</span> <span className="small"> soit 200€ d'économie </span> </li>
                             </ul>
 
+                            <p className="mb-small">Possibilité de payer en chèques emploi service prépayés</p>
+                            <p className="mb-small">ou</p>
+                            <p className="mb-small">Bénéficier d'une réduction d'impot de -50%</p>
 
                         </div>
                         <div className="content_button">
-                            <button className="click_button anim"><a href="#contact-view" className="anchor"><span>Contactez moi</span></a></button>
+                            <button className="click_button anim"><a href="#contact-view" className="anchor"><span href="#contact-view" className="anchor">Contactez moi</span></a></button>
                         </div>
                     </div>
 
