@@ -36,6 +36,10 @@ const IndividualCoachingPanel = (props) => {
                     <img src="images/pilates2.png" data-window="pilates" alt="" />
                 </div>
             </div>
+            <div className="bottom_modal">
+                <p>Les cours sont réalisés à votre domicile ou en extérieur.</p>
+                <p>Vous avez aussi la possibilité de partager votre séance avec un(e) ami(e), les frais sont ainsi divisés par 2.</p>
+            </div>
         </div>
     )
 }
