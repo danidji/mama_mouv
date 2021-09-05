@@ -2,6 +2,8 @@ import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import validator from 'validator';
 import axios from 'axios';
+import { AiOutlineInstagram } from "react-icons/ai";
+import { AiFillPhone } from "react-icons/ai";
 
 const Contact = (props) => {
 
@@ -89,7 +91,21 @@ const Contact = (props) => {
                         </Form>
                     )}
                 </Formik>
+
+                {/* 
+                <div className="icon_information">
+
+                    <div className="icon_insta-primary">
+                        <div className="icon_insta_content"></div>
+                    </div>
+
+                    <div className="icon_phone">
+                        .icon_phone_content
+                    </div>
+                </div> */}
             </div>
+
+
 
         </div >
     )
