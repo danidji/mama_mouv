@@ -9,7 +9,7 @@
 
 ### 1er étape avant mise en ligne héroku 
 
-- Ajouter les infos sur les lieux de coaching (à domicile ou extérieur)
+<!-- - Ajouter les infos sur les lieux de coaching (à domicile ou extérieur) -->
 - Ajouter une pastille avec l'instagram
 - Modifier l'apercu et les border de la photo sur la page qui suis je
 - mettre un affichage de confirmation d'envoi de mail
