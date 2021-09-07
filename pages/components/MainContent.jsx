@@ -52,7 +52,9 @@ const MainContent = (props) => {
                         </div>
                     </div>
                     <div className="image_pres">
-                        <img src="/images/coaching_jo4_sbg5.png" alt="Pres Mama mouv" />
+                        <div className="frame">
+                            <img src="/images/mama_mouv6.png" alt="Pres Mama mouv" />
+                        </div>
                     </div>
                 </div>
                 <div className="panel coaching" id="coaching-view" >
