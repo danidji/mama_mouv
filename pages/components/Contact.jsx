@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import validator from 'validator';
 import axios from 'axios';
@@ -6,6 +6,12 @@ import { AiOutlineInstagram } from "react-icons/ai";
 import { AiFillPhone } from "react-icons/ai";
 
 const Contact = (props) => {
+
+    const [isSend, setIsSend] = useState(false)
+
+    const clearIsSend = () => {
+        setTimeout(() => setIsSend(false), 10000)
+    }
 
     // Validation des champs du formulaire
     const validate = (value, type) => {
@@ -29,6 +35,7 @@ const Contact = (props) => {
 
             <div className="form_content">
                 <h1>Contact</h1>
+                {isSend && <div className="msg_send">Message envoyé</div>}
                 <p>Vous souhaitez plus de précisions sur mes cours ou vous inscrire à une séance d'essai ! </p>
 
                 <p> Remplissez ce formulaire de contact :</p>
@@ -45,9 +52,14 @@ const Contact = (props) => {
                         console.log('Values ==> ', values);
                         console.log('Actions ==>', actions);
 
-                        // axios.post('/api/contact', { params: values }).then((response) => {
-                        // console.log('Mon retour ==> ', response);
-                        // })
+                        axios.post('/api/contact', { params: values }).then((response) => {
+                            console.log('Mon retour ==> ', response.data.isSend);
+                            if (response.data.isSend) {
+                                actions.resetForm();
+                                setIsSend(true);
+                                clearIsSend();
+                            }
+                        })
                         actions.setSubmitting(false);
                     }}
 
@@ -93,7 +105,6 @@ const Contact = (props) => {
                 </Formik>
 
 
-                {/* <div className="icon_information"> */}
 
                 <a href="https://www.instagram.com/johanna_coaching/" target="_blank">
                     <div className="icon_share_insta">
@@ -105,7 +116,6 @@ const Contact = (props) => {
                         </div>
                     </div>
                 </a>
-                {/* <div className="phone_info"> */}
 
                 <div className="icon_phone">
                     <div className="icon_phone-primary ">
@@ -117,9 +127,6 @@ const Contact = (props) => {
                         </div>
                     </div>
                 </div>
-                {/* </div> */}
-
-                {/* </div> */}
             </div>
 
 

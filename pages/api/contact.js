@@ -59,7 +59,7 @@ function handleMail(req, res) {
                     // Envoi de l'email
                     mailer.send("dangbe91@gmail.com", doc.subject, doc.text).then(() => {
                         console.log('Mail envoyé !!')
-                        res.status(200).json({ data: "Mail envoyé", errors: {} })
+                        res.status(200).json({ isSend: true, errors: {} })
                     }).catch((err) => {
                         console.log("ERREUR ENVOI MAIL ==> ", err)
                     });
