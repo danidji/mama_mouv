@@ -3,6 +3,7 @@
     background-color: rgba(255, 216, 221,.4)
     height: 100%
     padding: 4rem 2rem 1rem 2rem
+    position: relative
     h1
         text-transform: uppercase
         font-family: 'selimaregular'
@@ -32,13 +33,83 @@
             font-family: Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif
 
         @include styleButton($first-color,$bgc-color,$font-color,1rem 2rem)
-    // .contact_information
-    //     flex: 1
-    //     align-self: center
-    //     padding: 2rem
-    //     .content_infos
-    //         display: flex
-    //         flex-direction: column
-    //         align-items: center
-    //         img
-    //             height: 14rem
+
+    .icon_share_insta
+        position: absolute
+        bottom: 9rem
+        left: 3rem
+        display: flex
+        cursor: pointer
+        margin: 2rem .5rem
+        background-color: $bgc-color
+        justify-content: center
+        align-items: end
+        border-radius: 2rem
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+
+        .icon_share_insta-primary
+            font-size: 2.5rem
+            height: 4rem
+            width: 4rem
+            display: flex
+            justify-content: center
+            align-items: center
+        &:hover
+            .icon_share_insta-content
+                height: 17rem
+                width: 17rem
+                display: block
+    .icon_share_insta-secondary
+        overflow: hidden
+        img
+            height: 14rem
+            border-radius: 2rem
+            margin: .5rem
+        .icon_share_insta-content
+            display: none
+
+    .icon_phone
+        position: absolute
+        bottom: 5rem
+        left: 3rem
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 4rem
+        padding: .5rem
+        &:hover
+            cursor: pointer
+            .icon_phone-secondary
+                transform: translate3d(1rem,0,0)
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+                .icon_phone-content
+                    transform: translate3d(0,0,0)
+        .icon_phone-primary
+            background: $bgc-color
+            width: 4rem
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+            height: 4rem
+            border-radius: 2rem
+            padding: .5rem
+            font-size: 2.5rem
+            display: flex
+            justify-content: center
+            align-items: center
+        .icon_phone-secondary
+            overflow: hidden
+            height: 4rem
+            border-radius: 2rem
+            transform: translate3d(-100%,0,0)
+            transition: transform 200ms ease
+        .icon_phone-content
+            background: $bgc-color
+            display: flex
+            align-items: center
+            font-size: 1.5rem
+            padding: .5rem 1rem
+            height: 4rem
+            line-height: 4rem
+            border-radius: 2rem
+            text-align: left
+            transform: translate3d(-100%,0,0)
+            transition: transform 200ms ease

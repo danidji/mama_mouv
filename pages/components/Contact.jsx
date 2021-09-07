@@ -92,17 +92,34 @@ const Contact = (props) => {
                     )}
                 </Formik>
 
-                {/* 
-                <div className="icon_information">
 
-                    <div className="icon_insta-primary">
-                        <div className="icon_insta_content"></div>
-                    </div>
+                {/* <div className="icon_information"> */}
 
-                    <div className="icon_phone">
-                        .icon_phone_content
+                <a href="https://www.instagram.com/johanna_coaching/" target="_blank">
+                    <div className="icon_share_insta">
+                        <div className="icon_share_insta-primary ">
+                            <AiOutlineInstagram />
+                        </div>
+                        <div className="icon_share_insta-secondary">
+                            <img src="images/QR_insta.jpg" alt="" className="icon_share_insta-content" />
+                        </div>
                     </div>
-                </div> */}
+                </a>
+                {/* <div className="phone_info"> */}
+
+                <div className="icon_phone">
+                    <div className="icon_phone-primary ">
+                        <AiFillPhone className="phone_icon" />
+                    </div>
+                    <div className="icon_phone-secondary">
+                        <div className="icon_phone-content">
+                            07.60.57.99.70
+                        </div>
+                    </div>
+                </div>
+                {/* </div> */}
+
+                {/* </div> */}
             </div>
 
 
