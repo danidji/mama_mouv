@@ -1,16 +1,18 @@
+require('dotenv').config();
+
 module.exports = {
     db: {
 
-        id: 'danUser'
-        , pwd: 'epKKuNAi4wxciyKl'
-        , cluster: 'danCluster0.kouk3'
+        id: `${process.env.DB_ID}`
+        , pwd: `${process.env.DB_PWD}`
+        , cluster: `${process.env.DB_CLUSTER}`
         , dbName: 'Mama-mouv'
     }
     , smtp: {
         service: 'Gmail',
         auth: {
-            user: 'dummy.test130721@gmail.com',
-            pass: 'ZM7?2nv?4c'
+            user: `${process.env.SMTP_USER}`,
+            pass: `${process.env.SMTP_PASS}`
         },
     }
 
