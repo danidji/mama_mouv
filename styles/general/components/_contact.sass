@@ -1,5 +1,4 @@
 .form_content
-    // flex: 2
     background-color: rgba(255, 216, 221,.4)
     height: 100%
     padding: 4rem 2rem 1rem 2rem
@@ -124,3 +123,12 @@
             text-align: left
             transform: translate3d(-100%,0,0)
             transition: transform 200ms ease
+
+@media screen and (max-width: 768px)
+    .form_content
+        .contact_form
+            margin: 0 0 5rem 0
+        .icon_phone
+            display: none
+        .icon_share_insta
+            display: none
