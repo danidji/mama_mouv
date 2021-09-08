@@ -10,6 +10,8 @@ import CoachingPanel from './CoachingPanel';
 
 const MainContent = (props) => {
 
+
+
     gsap.registerPlugin(ScrollTrigger);
 
     const panelsRef = useRef(null);
@@ -17,23 +19,33 @@ const MainContent = (props) => {
 
     // Animation scroll défilement horizontal
     useEffect(() => {
-        const panels = gsap.utils.toArray(".panel");
+        if (window.innerWidth > 768) {
+            // console.log(window.innerWidth)
 
-        gsap.to(panels, {
-            xPercent: -100 * (panels.length - 1),
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".panels_container",
-                pin: true,
-                start: "top top",
-                scrub: true,
-                snap: {
-                    snapTo: 1 / (panels.length - 1),
-                    duration: { min: 0.3, max: 1 }
-                },
-                end: () => "+=" + (panelsContainerRef.current.offsetWidth - innerWidth)
-            }
-        });
+
+            const panels = gsap.utils.toArray(".panel");
+
+            gsap.to(panels, {
+                xPercent: -100 * (panels.length - 1),
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".panels_container",
+                    pin: true,
+                    start: "top top",
+                    scrub: true,
+                    snap: {
+                        snapTo: 1 / (panels.length - 1),
+                        duration: { min: 0.3, max: 1 }
+                    },
+                    end: () => "+=" + (panelsContainerRef.current.offsetWidth - innerWidth)
+                }
+            });
+
+
+        }
+
+
+
 
     }, [])
 

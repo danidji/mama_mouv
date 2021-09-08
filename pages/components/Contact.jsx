@@ -31,7 +31,7 @@ const Contact = (props) => {
     }
 
     return (
-        <div className="full-screen" id="contact-view">
+        <section className="full-screen" id="contact-view">
 
             <div className="form_content">
                 <h1>Contact</h1>
@@ -131,7 +131,7 @@ const Contact = (props) => {
 
 
 
-        </div >
+        </section >
     )
 
 

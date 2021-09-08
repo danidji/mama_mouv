@@ -1,0 +1,45 @@
+.hamberger_menu
+    position: fixed
+    left: -14rem
+    // left: 0rem
+    top: 0
+    height: 100%
+    width: 14rem
+    z-index: 99
+    transition: 400ms ease-out
+    .button_menu
+        position: absolute
+        left: 15rem
+        top: 1rem
+        cursor: pointer
+        height: 3rem
+        width: 3rem
+        span
+            height: 0.6rem
+            width: 3rem
+            border-radius: .3rem
+            background-color: $first-color
+            display: block
+            transition: 400ms ease
+            margin-top: .2rem
+
+    .menu_navbar
+        // display: flex
+        // flex-direction: column
+        .nav_link
+            text-align: center
+            // padding: .5rem 0
+
+.active
+    left: 0
+    transition: 400ms ease
+    span
+        position: absolute
+        &:nth-child(1)
+            transform: rotate(45deg)
+        &:nth-child(2)
+            opacity: 0
+        &:nth-child(3)
+            transform: rotate(-45deg)
+.active + .container
+    opacity: 0.3
