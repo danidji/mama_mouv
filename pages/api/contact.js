@@ -3,7 +3,7 @@ const toolbox = require('../../back-office/services/toolbox');
 const validator = require('validator');
 const MailerService = require('../../back-office/services/Mailer');
 
-export default (req, res) => {
+const handler = (req, res) => {
 
     if (req.method === "POST") {
 
@@ -82,3 +82,5 @@ function handleMail(req, res) {
 
 
 }
+
+export default handler;
