@@ -67,15 +67,19 @@ const MainContent = (props) => {
                     </div>
                     <div className="image_pres">
                         <div className="frame">
-                            <Image 
-                                // src="/images/mama_mouv6.png" 
-                                src={presImage}
-                                alt="Pres Mama mouv"
-                                className="image_frame"
-                                // width={500}
-                                // height={500}
-                                // layout="responsive" 
-                            />
+                            <div style={{width:'100%', height:'100%', position:'relative'}}>
+                                <Image 
+                                    src="/images/mama_mouv6.png" 
+                                    // src={presImage}
+                                    alt="Pres Mama mouv"
+                                    className="image_frame"
+                                    // width={500}
+                                    // height={500}
+                                    // layout="responsive" 
+                                    layout="fill"
+                                    objectFit="cover"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
