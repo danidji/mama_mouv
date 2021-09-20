@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from 'react';
-import { animContext } from '../context/animContext';
+import animContext from '../context/animContext';
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import Image from 'next/image';
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useContext, useState } from 'react';
-import { animContext } from '../context/animContext';
+import  animContext  from '../context/animContext';
 
 
 const Layout = ({ welcome, mainContent, contact, navbar, hambergerMenu }) => {

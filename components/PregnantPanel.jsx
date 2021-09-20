@@ -1,10 +1,9 @@
 import React, { useEffect, useContext } from 'react';
-import Image from 'next/image';
-import { animContext } from '../context/animContext';
+import  animContext from '../context/animContext';
 import { AiOutlineCloseCircle } from "react-icons/ai";
+import Image from 'next/image';
 
-
-const PilatesPanel = (props) => {
+const PregnantPanel = (props) => {
 
     const context = useContext(animContext);
 
@@ -12,38 +11,41 @@ const PilatesPanel = (props) => {
         context.scrollToAnim()
     }, [])
 
-
     return (
         <div className="window_modal sub_window_modal">
             <div className="close_icon_modal black_close" onClick={props.close}>
                 <AiOutlineCloseCircle />
             </div>
-            {/* <img src="/images/pilates.png" className="gym_img" /> */}
             <div style={{width:'100%', height:'100%'}}>
                 <Image 
-                    src="/images/pilates.png" 
+                    src="/images/pregnant.jpg" 
                     className="sub_window_image" 
                     layout="fill"
                     objectFit="cover"
                 />
             </div>
+
             <div className="modal_information">
                 <div className="modal_head">
-                    <h3>Cours de pilates</h3>
+                    <h3>Coaching femmes enceintes</h3>
                 </div>
                 <div className="modal_content_information">
-                    <div className="left_content fs_large">
-                        <p>L&apos;approche globale, douce et tonique, le Pilates vise à renforcer les muscles centraux, à allonger la colonne vertébrale, à développer le tonus musculaire et à augmenter la conscience de son corps.</p>
+                    <div className="left_content fs_small">
+                        <p> L’activité physique pendant la grossesse permet de mieux vivre les modifications corporelles, elle diminue la fatigue et l’anxiété, limite le surplus de poids ainsi que le diabète gestationnel puis prévient les douleurs liées au changement de posture.</p>
+                        <p>Je vous offre plusieurs activités pour vous permettre de garder la forme durant votre grossesse et après l&apos;accouchement :</p>
+                        <ul>
+                            <li><span className="bold">Fitness pré/post natal</span> : un mélange d’exercices cardiovasculaire et de renforcement musculaire ciblés sur les muscles sollicités pendant et après la grossesse. Avec un programme  adapté au fur et à mesure des trimestres,vous garderez la forme tout au long de votre grossesse et bien après..</li>
+                            <li><span className="bold">Pilates pré/post natal </span>: Le Pilate est une activité physique adaptée à la femme enceinte par la pratique d’une méthode de gym douce centrée sur les muscles profonds et du périnée. Cela limite donc les lésions sur celui-ci en préservant sa tonicité, parfait pour les futures mamans qui veulent s’exercer en douceur</li>
+                            <li><span className="bold">Zumba pré natal </span>: Au même titre que le fitness, c&apos;est un exercice cardiovasculaire qui permet de garder la forme et la mobilité tout en s&apos;éclatant en dansant. </li>
+                        </ul>
 
-                        <p>Les exercices Pilates sont devenus l&apos;un des moyens les plus populaires de renforcer son corps et de se mettre en forme. </p>
-                        <p> De plus en plus de personnes ont adopté la méthode Pilates comme une façon stimulante et amusante de se mettre en forme et de découvrir des aspects de leurs corps qu’elle ignorait jusque-là.
-                        </p>
+
 
                     </div>
                     <div className="right_content">
                         <div className="content_price">
                             <h5>Tarifs</h5>
-                            <p>1er séance offerte !</p>
+                            <p>1er séance, bilan de forme et établissement du programme offert !</p>
                             <ul>
                                 <li><span className="bold">1 séances : 55€</span></li>
                                 <li><span className="bold">10 séances : 500€</span> <span className="small"> soit 50€ d&apos;économie </span>  </li>
@@ -53,7 +55,6 @@ const PilatesPanel = (props) => {
                             <p className="mb-small">Possibilité de payer en chèques emploi service prépayés</p>
                             <p className="mb-small">ou</p>
                             <p className="mb-small">Bénéficier d&apos;une réduction d&apos;impot de -50%</p>
-
 
                         </div>
                         <div className="content_button">
@@ -65,8 +66,9 @@ const PilatesPanel = (props) => {
 
 
             </div>
+
         </div>
     )
 }
 
-export default PilatesPanel;
+export default PregnantPanel;

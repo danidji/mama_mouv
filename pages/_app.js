@@ -1,6 +1,6 @@
 import '../styles/app.sass'
 import Head from 'next/head'
-import { animContext } from './context/animContext'
+import animContext  from '../context/animContext'
 import React, { useState } from 'react';
 
 //import GSAP 

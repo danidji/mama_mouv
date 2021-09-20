@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import Image from 'next/image';
-import presImage from'../../public/images/mama_mouv6.png';
+import presImage from'../public/images/mama_mouv6.png';
 
 //import GSAP 
 import { gsap } from "gsap/dist/gsap.js";

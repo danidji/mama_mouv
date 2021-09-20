@@ -1,14 +1,10 @@
 import React, { useEffect, useContext } from 'react';
 import Image from 'next/image';
-
-
-import { animContext } from '../context/animContext';
-
-
+import  animContext  from '../context/animContext';
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
 
-const PersoPanel = (props) => {
+const PilatesPanel = (props) => {
 
     const context = useContext(animContext);
 
@@ -19,12 +15,13 @@ const PersoPanel = (props) => {
 
     return (
         <div className="window_modal sub_window_modal">
-            <div className="close_icon_modal" onClick={props.close}>
+            <div className="close_icon_modal black_close" onClick={props.close}>
                 <AiOutlineCloseCircle />
             </div>
+            {/* <img src="/images/pilates.png" className="gym_img" /> */}
             <div style={{width:'100%', height:'100%'}}>
                 <Image 
-                    src="/images/training.jpg" 
+                    src="/images/pilates.png" 
                     className="sub_window_image" 
                     layout="fill"
                     objectFit="cover"
@@ -32,23 +29,21 @@ const PersoPanel = (props) => {
             </div>
             <div className="modal_information">
                 <div className="modal_head">
-                    <h3>Suivi personnalisé</h3>
+                    <h3>Cours de pilates</h3>
                 </div>
                 <div className="modal_content_information">
                     <div className="left_content fs_large">
-                        <p>Mon objectif est avant tout de réaliser le votre, que ce soit pour <span className="bold"> la perte de poid</span>,<span className="bold"> la remise en forme</span>, <span className="bold">la prise de masse</span>, nous analyserons ensemble vos objectifs pour <span className="bold">construire un programme entièrement adapté à vos besoins.</span></p>
+                        <p>L&apos;approche globale, douce et tonique, le Pilates vise à renforcer les muscles centraux, à allonger la colonne vertébrale, à développer le tonus musculaire et à augmenter la conscience de son corps.</p>
 
-                        <p>Votre programme sera entièrement <span className="bold">évolutif et adapté à vos progrès et votre évolution.</span></p>
-
-                        <p>Coaching adapté à tous, <span className="bold">Débutant</span>, <span className="bold">Professionnel</span>, <span className="bold">Sénior</span> ou <span className="bold">PMR (personne à mobilité réduite)</span>.</p>
-
-                        <p>Un premier bilan gratuit, qui prendra en compte vos antécédents sportif, votre forme globale ainsi que vos objectifs, nous permettra de construire ensemble votre programme d&apos;entrainement</p>
+                        <p>Les exercices Pilates sont devenus l&apos;un des moyens les plus populaires de renforcer son corps et de se mettre en forme. </p>
+                        <p> De plus en plus de personnes ont adopté la méthode Pilates comme une façon stimulante et amusante de se mettre en forme et de découvrir des aspects de leurs corps qu’elle ignorait jusque-là.
+                        </p>
 
                     </div>
                     <div className="right_content">
                         <div className="content_price">
                             <h5>Tarifs</h5>
-                            <p>1er séance, bilan de forme et établissement du programme offert !</p>
+                            <p>1er séance offerte !</p>
                             <ul>
                                 <li><span className="bold">1 séances : 55€</span></li>
                                 <li><span className="bold">10 séances : 500€</span> <span className="small"> soit 50€ d&apos;économie </span>  </li>
@@ -58,6 +53,8 @@ const PersoPanel = (props) => {
                             <p className="mb-small">Possibilité de payer en chèques emploi service prépayés</p>
                             <p className="mb-small">ou</p>
                             <p className="mb-small">Bénéficier d&apos;une réduction d&apos;impot de -50%</p>
+
+
                         </div>
                         <div className="content_button">
                             <button className="click_button anim"><a href="#contact-view" className="anchor"><span href="#contact-view" className="anchor">Contactez moi</span></a></button>
@@ -72,4 +69,4 @@ const PersoPanel = (props) => {
     )
 }
 
-export default PersoPanel;
+export default PilatesPanel;

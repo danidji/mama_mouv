@@ -1,11 +1,11 @@
 // import Image from 'next/image'
 
-import Layout from "./components/Layout";
-import Welcome from "./components/Welcome";
-import MainContent from "./components/MainContent";
-import Contact from "./components/Contact";
-import Navbar from './components/Navbar';
-import HambergerMenu from "./components/HambergerMenu";
+import Layout from "../components/Layout";
+import Welcome from "../components/Welcome";
+import MainContent from "../components/MainContent";
+import Contact from "../components/Contact";
+import Navbar from '../components/Navbar';
+import HambergerMenu from "../components/HambergerMenu";
 
 export default function Home() {
   return (
