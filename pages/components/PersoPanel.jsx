@@ -1,4 +1,7 @@
 import React, { useEffect, useContext } from 'react';
+import Image from 'next/image';
+
+
 import { animContext } from '../context/animContext';
 
 
@@ -19,7 +22,14 @@ const PersoPanel = (props) => {
             <div className="close_icon_modal" onClick={props.close}>
                 <AiOutlineCloseCircle />
             </div>
-            <img src="/images/training.jpg" className="gym_img" />
+            <div style={{width:'100%', height:'100%'}}>
+                <Image 
+                    src="/images/training.jpg" 
+                    className="sub_window_image" 
+                    layout="fill"
+                    objectFit="cover"
+                />
+            </div>
             <div className="modal_information">
                 <div className="modal_head">
                     <h3>Suivi personnalisé</h3>

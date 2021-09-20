@@ -1,6 +1,7 @@
 import React, { useEffect, useContext } from 'react';
 import { animContext } from '../context/animContext';
 import { AiOutlineCloseCircle } from "react-icons/ai";
+import Image from 'next/image';
 
 const CollectiveCoachingPanel = (props) => {
 
@@ -16,7 +17,15 @@ const CollectiveCoachingPanel = (props) => {
         <div className="window_modal">
             <div className="col_modal">
 
-                <img src="/images/fitness-group3.jpg" className="gym_img" />
+
+            <div style={{width:'100%', height:'100%'}}>
+                <Image 
+                    src="/images/fitness-group3.jpg" 
+                    className="sub_window_image" 
+                    layout="fill"
+                    objectFit="cover"
+                />
+            </div>
                 <div className="head_modal">
                     <h3>Coaching Collectif</h3>
                     <div className="close_icon" onClick={props.close}>

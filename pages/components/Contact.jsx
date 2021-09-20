@@ -4,6 +4,7 @@ import validator from 'validator';
 import axios from 'axios';
 import { AiOutlineInstagram } from "react-icons/ai";
 import { AiFillPhone } from "react-icons/ai";
+import Image from 'next/image';
 
 const Contact = (props) => {
 
@@ -106,13 +107,23 @@ const Contact = (props) => {
 
 
 
-                <a href="https://www.instagram.com/johanna_coaching/" target="_blank">
+                <a href="https://www.instagram.com/johanna_coaching/" target="_blank" rel="noreferrer">
                     <div className="icon_share_insta">
                         <div className="icon_share_insta-primary ">
                             <AiOutlineInstagram />
                         </div>
                         <div className="icon_share_insta-secondary">
-                            <img src="images/QR_insta.jpg" alt="" className="icon_share_insta-content" />
+                            <div style={{width:'16rem', height:'21rem', padding:'0.5rem'}} className="icon_share_insta-content">
+                                <Image 
+                                    src="/images/QR_insta.jpg" 
+                                    className="icon_share_insta-content" 
+                                    layout="fill"
+                                    objectFit="cover"
+                                />
+                            </div>
+
+
+
                         </div>
                     </div>
                 </a>

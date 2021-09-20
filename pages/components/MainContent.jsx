@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from 'react';
+import Image from 'next/image';
+import presImage from'../../public/images/mama_mouv6.png';
 
 //import GSAP 
 import { gsap } from "gsap/dist/gsap.js";
@@ -65,7 +67,15 @@ const MainContent = (props) => {
                     </div>
                     <div className="image_pres">
                         <div className="frame">
-                            <img src="/images/mama_mouv6.png" alt="Pres Mama mouv" />
+                            <Image 
+                                // src="/images/mama_mouv6.png" 
+                                src={presImage}
+                                alt="Pres Mama mouv"
+                                className="image_frame"
+                                // width={500}
+                                // height={500}
+                                // layout="responsive" 
+                            />
                         </div>
                     </div>
                 </div>

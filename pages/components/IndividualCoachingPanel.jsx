@@ -1,4 +1,8 @@
 import React from 'react';
+import Image from 'next/image';
+
+
+
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
 const IndividualCoachingPanel = (props) => {
@@ -17,7 +21,17 @@ const IndividualCoachingPanel = (props) => {
                     onClick={props.open}
                 >
                     <div className="subWindow_title" data-window="perso" >Personnalisé</div>
-                    <img src="images/coach-sportif-perso2.jpg" data-window="perso" alt="" />
+                    <div style={{width:'100%', height:'25rem'}}>
+                        <Image
+                            src="/images/coach-sportif-perso2.jpg"
+                            className="subwindow_image" 
+                            data-window="perso" 
+                            alt="" 
+                            layout="fill"
+                            objectFit="cover"
+                            
+                        />
+                     </div>
                 </div>
                 <div
                     className="sub_window"
@@ -25,7 +39,16 @@ const IndividualCoachingPanel = (props) => {
                     onClick={props.open}
                 >
                     <div className="subWindow_title" data-window="pregnant" >Femmes enceintes</div>
-                    <img src="images/coaching_jo8.png" data-window="pregnant" alt="" />
+                    <div style={{width:'100%', height:'25rem'}}>
+                        <Image
+                            src="/images/coaching_jo8.png"
+                            className="subwindow_image" 
+                            data-window="pregnant"
+                            alt="" 
+                            layout="fill"
+                            objectFit="cover"
+                        />
+                    </div>
                 </div>
                 <div
                     className="sub_window"
@@ -33,7 +56,16 @@ const IndividualCoachingPanel = (props) => {
                     onClick={props.open}
                 >
                     <div className="subWindow_title" data-window="pilates" >Pilates</div>
-                    <img src="images/pilates2.png" data-window="pilates" alt="" />
+                    <div style={{width:'100%', height:'25rem'}}>
+                        <Image
+                            src="/images/pilates2.png" 
+                            className="subwindow_image" 
+                            data-window="pilates" 
+                            alt="" 
+                            layout="fill"
+                            objectFit="cover"
+                        />
+                     </div>
                 </div>
             </div>
             <div className="bottom_modal">

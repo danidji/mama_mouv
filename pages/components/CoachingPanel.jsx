@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 import IndividualCoachingPanel from './IndividualCoachingPanel';
 import CollectiveCoachingPanel from './CollectiveCoachingPanel';
@@ -59,7 +60,17 @@ const CoachingPanel = (props) => {
                     onClick={openPanel}
                 >
                     <div className="window_title" data-window="individual">Individuel</div>
-                    <img src="images/sports-perso.jpg" alt="" data-window="individual" />
+                    <div style={{width:'25rem', height:'20rem'}}>
+                        <Image
+                            src="/images/sports-perso.jpg" 
+                            // src={indImage} 
+                            // className="coaching_type_image"
+                            alt="" 
+                            data-window="individual" 
+                            layout="fill"
+                            objectFit="cover"
+                        />
+                    </div>
                 </div>
                 <div
                     className="window collective"
@@ -67,7 +78,16 @@ const CoachingPanel = (props) => {
                     onClick={openPanel}
                 >
                     <div className="window_title" data-window="collective">Collectif</div>
-                    <img src="images/fitness-group2.jpg" alt="" data-window="collective" />
+                    <div style={{width:'25rem', height:'20rem'}}>
+                        <Image 
+                            src="/images/fitness-group2.jpg" 
+                            alt="" 
+                            // className="coaching_type_image"
+                            data-window="collective"
+                            layout="fill"
+                            objectFit="cover" 
+                        />
+                    </div>
                 </div>
                 {displayWindow(display)}
             </div>

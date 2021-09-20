@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from 'react';
 import { animContext } from '../context/animContext';
 import { AiOutlineCloseCircle } from "react-icons/ai";
-
+import Image from 'next/image';
 
 const PregnantPanel = (props) => {
 
@@ -16,8 +16,14 @@ const PregnantPanel = (props) => {
             <div className="close_icon_modal black_close" onClick={props.close}>
                 <AiOutlineCloseCircle />
             </div>
-            <img src="/images/pregnant.jpg" className="gym_img" />
-
+            <div style={{width:'100%', height:'100%'}}>
+                <Image 
+                    src="/images/pregnant.jpg" 
+                    className="sub_window_image" 
+                    layout="fill"
+                    objectFit="cover"
+                />
+            </div>
 
             <div className="modal_information">
                 <div className="modal_head">
