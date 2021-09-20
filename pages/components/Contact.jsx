@@ -36,7 +36,7 @@ const Contact = (props) => {
             <div className="form_content">
                 <h1>Contact</h1>
                 {isSend && <div className="msg_send">Message envoyé</div>}
-                <p>Vous souhaitez plus de précisions sur mes cours ou vous inscrire à une séance d'essai ! </p>
+                <p>Vous souhaitez plus de précisions sur mes cours ou vous inscrire à une séance d&apos;essai ! </p>
 
                 <p> Remplissez ce formulaire de contact :</p>
                 <Formik

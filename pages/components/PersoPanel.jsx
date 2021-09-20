@@ -32,7 +32,7 @@ const PersoPanel = (props) => {
 
                         <p>Coaching adapté à tous, <span className="bold">Débutant</span>, <span className="bold">Professionnel</span>, <span className="bold">Sénior</span> ou <span className="bold">PMR (personne à mobilité réduite)</span>.</p>
 
-                        <p>Un premier bilan gratuit, qui prendra en compte vos antécédents sportif, votre forme globale ainsi que vos objectifs, nous permettra de construire ensemble votre programme d'entrainement</p>
+                        <p>Un premier bilan gratuit, qui prendra en compte vos antécédents sportif, votre forme globale ainsi que vos objectifs, nous permettra de construire ensemble votre programme d&apos;entrainement</p>
 
                     </div>
                     <div className="right_content">
@@ -41,13 +41,13 @@ const PersoPanel = (props) => {
                             <p>1er séance, bilan de forme et établissement du programme offert !</p>
                             <ul>
                                 <li><span className="bold">1 séances : 55€</span></li>
-                                <li><span className="bold">10 séances : 500€</span> <span className="small"> soit 50€ d'économie </span>  </li>
-                                <li><span className="bold">20 séances : 900€</span> <span className="small"> soit 200€ d'économie </span> </li>
+                                <li><span className="bold">10 séances : 500€</span> <span className="small"> soit 50€ d&apos;économie </span>  </li>
+                                <li><span className="bold">20 séances : 900€</span> <span className="small"> soit 200€ d&apos;économie </span> </li>
                             </ul>
 
                             <p className="mb-small">Possibilité de payer en chèques emploi service prépayés</p>
                             <p className="mb-small">ou</p>
-                            <p className="mb-small">Bénéficier d'une réduction d'impot de -50%</p>
+                            <p className="mb-small">Bénéficier d&apos;une réduction d&apos;impot de -50%</p>
                         </div>
                         <div className="content_button">
                             <button className="click_button anim"><a href="#contact-view" className="anchor"><span href="#contact-view" className="anchor">Contactez moi</span></a></button>
