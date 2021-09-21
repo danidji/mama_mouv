@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, Form, Field } from 'formik';
 import validator from 'validator';
 import axios from 'axios';
 import { AiOutlineInstagram } from "react-icons/ai";
