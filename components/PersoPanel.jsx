@@ -23,8 +23,8 @@ const PersoPanel = (props) => {
             <div className="close_icon_modal" onClick={props.close}>
                 <AiOutlineCloseCircle />
             </div>
-            <div style={{ width: "100%", height: "100%" }}>
-                <Image src="/images/training.jpg" className="sub_window_image" layout="fill" objectFit="cover" />
+            <div style={{ width: "100%", height: "100%" }} className="sub_window_image">
+                <Image src="/images/training.jpg" layout="fill" objectFit="cover" />
             </div>
             <div className="modal_information">
                 <div className="modal_head">
