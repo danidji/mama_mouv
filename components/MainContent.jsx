@@ -1,19 +1,13 @@
-import React, { useRef, useEffect } from 'react';
-import Image from 'next/image';
-import presImage from'../public/images/mama_mouv6.png';
+import React, { useRef, useEffect } from "react";
+import Image from "next/image";
+import presImage from "../public/images/mama_mouv6.png";
 
-//import GSAP 
+//import GSAP
 import { gsap } from "gsap/dist/gsap.js";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import CoachingPanel from './CoachingPanel';
-
-
-
+import CoachingPanel from "./CoachingPanel";
 
 const MainContent = (props) => {
-
-
-
     gsap.registerPlugin(ScrollTrigger);
 
     const panelsRef = useRef(null);
@@ -22,9 +16,6 @@ const MainContent = (props) => {
     // Animation scroll défilement horizontal
     useEffect(() => {
         if (window.innerWidth > 768) {
-            // console.log(window.innerWidth)
-
-
             const panels = gsap.utils.toArray(".panel");
 
             gsap.to(panels, {
@@ -37,19 +28,13 @@ const MainContent = (props) => {
                     scrub: true,
                     snap: {
                         snapTo: 1 / (panels.length - 1),
-                        duration: { min: 0.3, max: 1 }
+                        duration: { min: 0.3, max: 1 },
                     },
-                    end: () => "+=" + (panelsContainerRef.current.offsetWidth - innerWidth)
-                }
+                    end: () => "+=" + (panelsContainerRef.current.offsetWidth - innerWidth),
+                },
             });
-
-
         }
-
-
-
-
-    }, [])
+    }, []);
 
     return (
         <section className="panels" ref={panelsRef}>
@@ -58,7 +43,10 @@ const MainContent = (props) => {
                     <div className="infos">
                         <div className="infos_text">
                             <h1 className="title first">Qui suis je ?</h1>
-                            <p>Infirmière pendant 10 ans puis par la suite coach sportif diplômé d’état du BPJEPS AGFF (Activités Gymniques de la Forme et de la Force), je vous propose mes services de coaching à l’extérieur, à domicile ou en entreprise, en groupe ou en individuel. </p>
+                            <p>
+                                Infirmière pendant 10 ans puis par la suite coach sportif diplômé d’état du BPJEPS AGFF (Activités Gymniques de la Forme et de la Force), je vous propose mes services
+                                de coaching à l’extérieur, à domicile ou en entreprise, en groupe ou en individuel.{" "}
+                            </p>
                             <h2 className="title">Mon objectif</h2>
                             <p>Réaliser les votres, dans la joie et la sincérité !</p>
                             <h2 className="title">Ma philosophie</h2>
@@ -67,15 +55,15 @@ const MainContent = (props) => {
                     </div>
                     <div className="image_pres">
                         <div className="frame">
-                            <div style={{width:'100%', height:'100%', position:'relative'}}>
-                                <Image 
-                                    src="/images/mama_mouv6.png" 
+                            <div style={{ width: "100%", height: "100%", position: "relative" }}>
+                                <Image
+                                    src="/images/mama_mouv6.png"
                                     // src={presImage}
                                     alt="Pres Mama mouv"
                                     className="image_frame"
                                     // width={500}
                                     // height={500}
-                                    // layout="responsive" 
+                                    // layout="responsive"
                                     layout="fill"
                                     objectFit="cover"
                                 />
@@ -83,15 +71,12 @@ const MainContent = (props) => {
                         </div>
                     </div>
                 </div>
-                <div className="panel coaching" id="coaching-view" >
+                <div className="panel coaching" id="coaching-view">
                     <CoachingPanel />
-
                 </div>
             </div>
         </section>
-    )
-
-
+    );
 };
 
 export default MainContent;
