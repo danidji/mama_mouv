@@ -1,7 +1,9 @@
-import React, { createContext } from 'react';
+import React, { createContext } from "react";
 
 const animContext = createContext({
-    scrollToAnim: () => { }
-})
+    windowProps: {},
+    setWindowProps: () => {},
+    scrollToAnim: () => {},
+});
 
 export default animContext;
