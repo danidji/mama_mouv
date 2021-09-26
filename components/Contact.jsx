@@ -52,6 +52,8 @@ const Contact = (props) => {
                                 actions.resetForm();
                                 setIsSend(true);
                                 clearIsSend();
+                            } else if (response.errors) {
+                                console.log("MES ERREURS ==>", response.errors);
                             }
                         });
                         actions.setSubmitting(false);
