@@ -13,8 +13,8 @@ const CollectiveCoachingPanel = (props) => {
     return (
         <div className="window_modal">
             <div className="col_modal">
-                <div style={{ width: "100%", height: "100%" }}>
-                    <Image alt="Coaching collectifs" src="/images/fitness-group3.jpg" className="sub_window_image" layout="fill" objectFit="cover" />
+                <div style={{ width: "100%", height: "100%" }} className="sub_window_image">
+                    <Image alt="Coaching collectifs" src="/images/fitness-group3.jpg" layout="fill" objectFit="cover" />
                 </div>
                 <div className="head_modal">
                     <h3>Coaching Collectif</h3>
