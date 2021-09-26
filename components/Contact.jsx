@@ -46,15 +46,18 @@ const Contact = (props) => {
                         text: "",
                     }}
                     onSubmit={(values, actions) => {
-                        instance.post("/api/contact", { params: values }).then((response) => {
-                            if (response.data.isSend) {
-                                actions.resetForm();
-                                setIsSend(true);
-                                clearIsSend();
-                            } else if (response.errors) {
+                        instance
+                            .post("/api/contact", { params: values })
+                            .then((response) => {
+                                if (response.data.isSend) {
+                                    actions.resetForm();
+                                    setIsSend(true);
+                                    clearIsSend();
+                                }
+                            })
+                            .catch((response) => {
                                 console.log("MES ERREURS ==>", response.errors);
-                            }
-                        });
+                            });
                         actions.setSubmitting(false);
                     }}
                 >
