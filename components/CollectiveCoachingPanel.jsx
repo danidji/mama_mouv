@@ -6,6 +6,8 @@ import Image from "next/image";
 const CollectiveCoachingPanel = (props) => {
     const context = useContext(animContext);
 
+    const { close } = props;
+
     useEffect(() => {
         context.scrollToAnim();
     }, []);
@@ -18,7 +20,7 @@ const CollectiveCoachingPanel = (props) => {
                 </div>
                 <div className="head_modal">
                     <h3>Coaching Collectif</h3>
-                    <div className="close_icon" onClick={props.close}>
+                    <div className="close_icon" onClick={close}>
                         <AiOutlineCloseCircle />
                     </div>
                 </div>
@@ -28,7 +30,7 @@ const CollectiveCoachingPanel = (props) => {
                     <p> N’hésitez pas à me contacter pour voir ensemble les possibilités.</p>
                 </div>
                 <div className="content_button">
-                    <button className="click_button anim">
+                    <button className="click_button anim" onClick={close}>
                         <a href="#contact-view" className="anchor">
                             <span href="#contact-view" className="anchor">
                                 Contactez moi

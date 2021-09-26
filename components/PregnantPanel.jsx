@@ -5,6 +5,7 @@ import Image from "next/image";
 
 const PregnantPanel = (props) => {
     const context = useContext(animContext);
+    const { close } = props;
 
     useEffect(() => {
         context.scrollToAnim();
@@ -12,7 +13,7 @@ const PregnantPanel = (props) => {
 
     return (
         <div className="window_modal sub_window_modal">
-            <div className="close_icon_modal black_close" onClick={props.close}>
+            <div className="close_icon_modal black_close" onClick={close}>
                 <AiOutlineCloseCircle />
             </div>
             <div style={{ width: "100%", height: "100%" }} className="sub_window_image">
@@ -68,9 +69,9 @@ const PregnantPanel = (props) => {
                             <p className="mb-small">Bénéficier d&apos;une réduction d&apos;impot de -50%</p>
                         </div>
                         <div className="content_button">
-                            <button className="click_button anim">
-                                <a href="#contact-view" className="anchor">
-                                    <span href="#contact-view" className="anchor">
+                            <button className="click_button anim" onClick={close}>
+                                <a href="#contact-view" className="anchor" data-type="bouton">
+                                    <span href="#contact-view" className="anchor" data-type="bouton">
                                         Contactez moi
                                     </span>
                                 </a>

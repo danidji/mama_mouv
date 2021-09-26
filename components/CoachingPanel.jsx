@@ -16,8 +16,8 @@ const CoachingPanel = (props) => {
     };
 
     //Fermeture de la fenetre et retour sur la précédente
-    const closePanel = () => {
-        if (display === "individual" || display === "collective") {
+    const closePanel = (e) => {
+        if (display === "individual" || display === "collective" || e.target.dataset["type"] === "bouton") {
             setDisplay(null);
         } else if (display === "perso" || display === "pregnant" || display === "pilates") {
             setDisplay("individual");
