@@ -12,19 +12,13 @@ const PersoPanel = (props) => {
         context.scrollToAnim();
     }, []);
 
-    const windowWidth = window.innerWidth;
-
-    useEffect(() => {
-        console.log(windowWidth);
-    }, [windowWidth]);
-
     return (
         <div className="window_modal sub_window_modal">
             <div className="close_icon_modal" onClick={props.close}>
                 <AiOutlineCloseCircle />
             </div>
             <div style={{ width: "100%", height: "100%" }} className="sub_window_image">
-                <Image src="/images/training.jpg" layout="fill" objectFit="cover" />
+                <Image alt="coaching individuel" src="/images/training.jpg" layout="fill" objectFit="cover" />
             </div>
             <div className="modal_information">
                 <div className="modal_head">

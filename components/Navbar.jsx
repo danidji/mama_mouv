@@ -37,7 +37,7 @@ const Navbar = (props) => {
                 {windowProps.width < 768 && (
                     <>
                         <li className="nav_link">
-                            <a href="https://www.instagram.com/johanna_coaching/" target="_blank">
+                            <a href="https://www.instagram.com/johanna_coaching/" target="_blank" rel="noreferrer">
                                 <AiOutlineInstagram />
                             </a>
                         </li>

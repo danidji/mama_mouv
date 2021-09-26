@@ -16,7 +16,7 @@ const PregnantPanel = (props) => {
                 <AiOutlineCloseCircle />
             </div>
             <div style={{ width: "100%", height: "100%" }} className="sub_window_image">
-                <Image src="/images/pregnant.jpg" className="sub_window_image" layout="fill" objectFit="cover" />
+                <Image alt="coaching femme enceinte" src="/images/pregnant.jpg" className="sub_window_image" layout="fill" objectFit="cover" />
             </div>
 
             <div className="modal_information">

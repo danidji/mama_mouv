@@ -96,7 +96,7 @@ const Contact = (props) => {
                                 }}
                                 className="icon_share_insta-content"
                             >
-                                <Image src="/images/QR_insta.jpg" className="icon_share_insta-content" layout="fill" objectFit="cover" />
+                                <Image alt="instagram" src="/images/QR_insta.jpg" className="icon_share_insta-content" layout="fill" objectFit="cover" />
                             </div>
                         </div>
                     </div>

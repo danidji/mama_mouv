@@ -13,10 +13,6 @@ const Layout = ({ welcome, mainContent, contact, navbar, hambergerMenu }) => {
             setIsMobile(true);
             setWindowProps({ width: window.innerWidth });
         }
-        // context.setWidthStatus();
-        // if (windowSize) {
-        //     setIsMobile(true);
-        // }
     }, []);
 
     return (
