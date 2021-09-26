@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Formik, Form, Field } from "formik";
 import validator from "validator";
-import axios from "axios";
 import instance from "../services/axiosInstance";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { AiFillPhone } from "react-icons/ai";
