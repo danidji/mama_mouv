@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Formik, Form, Field } from "formik";
 import validator from "validator";
 import axios from "axios";
+import instance from "../services/axiosInstance";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { AiFillPhone } from "react-icons/ai";
 import Image from "next/image";
@@ -46,11 +47,7 @@ const Contact = (props) => {
                         text: "",
                     }}
                     onSubmit={(values, actions) => {
-                        console.log("Values ==> ", values);
-                        console.log("Actions ==>", actions);
-
-                        axios.post("/api/contact", { params: values }).then((response) => {
-                            console.log("Mon retour ==> ", response.data.isSend);
+                        instance.post("/api/contact", { params: values }).then((response) => {
                             if (response.data.isSend) {
                                 actions.resetForm();
                                 setIsSend(true);
