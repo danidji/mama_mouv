@@ -38,7 +38,13 @@ export default function Home() {
 
     return (
         <div className="site">
-            <Layout navbar={<Navbar />} welcome={<Welcome />} mainContent={<MainContent />} contact={<Contact />} hambergerMenu={<HambergerMenu />} />
+            <Layout 
+                navbar={<Navbar />} 
+                welcome={<Welcome />} 
+                mainContent={<MainContent />} 
+                contact={<Contact />} 
+                hambergerMenu={<HambergerMenu 
+            />} />
         </div>
     );
 }
